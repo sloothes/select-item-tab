@@ -1,0 +1,144 @@
+<script>
+
+$(function(){
+    var component_ID = {
+        type: "tab",
+        version: 1.2,
+        kind: "component",
+        name: "select-outfit-item-tab.html",
+        description: "select collection record from zangoDB.",
+    };
+});
+
+</script>
+
+
+<div class="helpers-header database-header" style="margin-bottom:20px;">
+    <h3>Select outfit item:</h3>
+</div>
+
+<div>
+    <h4 style="margin-bottom:30px;">
+        <span style="vertical-align:-0.5rem;">Select collection:</span>
+        <div style="display:inline-block;width:50%;float:right;">
+            <select id="outfit-slot-collection" class="form-control outfit-slot-droplist" readOnly>
+                <option value="">Select outfit slot:</option>
+                <option value="body">body</option>
+                <option value="eyes">eyes</option>
+                <option value="hairs">hairs</option>
+                <option value="tshirt">tshirt</option>
+                <option value="dress">dress</option>
+                <option value="costume">costume</option>
+                <option value="trousers">trousers</option>
+                <option value="stockings">stockings</option>
+                <option value="underwears">underwears</option>
+                <option value="shoes">shoes</option>
+            </select>
+        </div>
+    </h4>
+</div>
+
+<style>
+
+    #db-collection {
+        max-width:475px;
+        max-height:660px;
+        color:#fff;
+        border:none;
+        padding:0px;
+        background-color:#fff0;
+    }
+
+    #db-display-documents {
+        margin:10px 0px;
+        color:#fff;
+        text-align:left;
+        max-height:240px;
+        overflow:auto;
+        background: none;
+    }
+
+    #db-display-documents h3{
+        margin:0px;
+        text-align:center;
+    }
+
+    .db-page-btn {
+        max-width:45px;
+        padding:6px 10px;
+    }
+
+    .doc-item {
+        padding:2px 5px;
+        text-align:left;
+        cursor:pointer;
+    }
+
+    .doc-item.selected {
+        background-color:#2d76bd;
+    }
+
+</style>
+
+<div id="collection-records">
+
+    <h4>Collection records:
+        <div id="itmcount" class="pull-right small" style="margin-top:4px;color:#ddd;">
+            <span id="from">zero</span>
+            to <span id="upto">zero</span>
+            of <span id="count">none</span>
+        </div>
+    </h4>
+
+    <div class="pager">
+
+        <div style="height:34px;margin:10px 0px 20px;">
+            <li class="btn btn-primary btn-white-outline first-page-btn pull-left" style="margin-right:5px;">First</li>
+            <li class="btn btn-primary btn-white-outline get-prev-group-btn pull-left">&#9668;&#9668;</li>
+            <li class="btn btn-primary btn-white-outline last-page-btn pull-right" style="margin-left:5px;">Last</li>
+            <li class="btn btn-primary btn-white-outline get-next-group-btn pull-right">&#9658;&#9658;</li>
+        </div>
+
+        <div id="db-display-documents" class="well panel-container"><h3>select collection!</h3></div>
+
+        <div>
+            <li class="btn btn-primary get-prev-btn pull-left">&#9668;</li>
+            <div class="pager-buttons-holder" style="display:inline;">
+                <a class="btn btn-default page-btn">1</a>
+                <a class="btn btn-default page-btn">2</a>
+                <a class="btn btn-default page-btn">3</a>
+                <a class="btn btn-default page-btn">4</a>
+            </div>
+            <li class="btn btn-primary get-next-btn pull-right">&#9658;</li>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+/*
+    Object.keys(db._cols).forEach(function(name){
+        var option = `<option value="${name}">${name}</option>`;
+        $("#select-outfit-slot").append(option);
+        debugMode && console.log( option );
+    });
+*/
+</script>
